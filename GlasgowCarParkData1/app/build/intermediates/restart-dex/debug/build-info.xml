@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="420dpi"
+    format="7"
+    timestamp="1137666061973798"
+    token="-5584018247242283576" >
+
+    <task
+        name="javac"
+        duration="548" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="211" />
+    <task
+        name="verifier"
+        duration="61" />
+
+    <artifact
+        location="F:\GlasgowCarParkData1\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="1137666061973798" >
+        <artifact
+            location="F:\GlasgowCarParkData1\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

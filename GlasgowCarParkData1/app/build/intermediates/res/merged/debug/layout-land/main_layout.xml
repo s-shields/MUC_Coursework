@@ -1,0 +1,193 @@
+<!--
+ * Author: Steven Shields
+ * Student ID: s1434230
+ * Student User: sshiel202-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/Glasgow_Car_Parks"
+        android:textSize="@dimen/app_name_text_size" />
+
+    <Spinner
+        android:id="@+id/cpSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/Padding_Left" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Previous_Btn" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Next_Btn" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Car Parks"
+                    android:id="@+id/btnDisplay" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Locate Car Park"
+                    android:id="@+id/btnLocator" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/cpTotalSpaces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:gravity="center"
+                    android:text="@string/TextView"
+                    android:textSize="@dimen/data_text_size" />
+
+                <TextView
+                    android:id="@+id/cpName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="@string/TextView"
+                    android:textSize="@dimen/data_text_size" />
+
+                <TextView
+                    android:id="@+id/cpPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:gravity="center"
+                    android:text="@string/TextView"
+                    android:textSize="@dimen/data_text_size" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:baselineAligned="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.10" >
+
+                    <TextView
+                        android:id="@+id/cpSpaceAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Vacant"
+                        android:textSize="@dimen/data_text_size2" />
+
+                    <TextView
+                        android:id="@+id/vacantPercentage"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_below="@id/cpSpaceAvailable"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/TextView"
+                        android:textSize="@dimen/data_text_size2"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" >
+
+                    <com.example.glasgowcarparkdata.ProgressIndicator
+                        android:id="@+id/determinate_progress_indicator1"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.10" >
+
+                    <TextView
+                        android:id="@+id/cpSpaceTaken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Occupied"
+                        android:textSize="@dimen/data_text_size2" />
+
+                    <TextView
+                        android:id="@+id/occupiedPrecentage"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_below="@id/cpSpaceTaken"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/TextView"
+                        android:textSize="@dimen/data_text_size2"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>    
+
+</LinearLayout>
